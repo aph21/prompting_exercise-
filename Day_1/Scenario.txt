@@ -1,0 +1,12 @@
+***Scenario***
+
+**Write a simple Python script**
+The simplest possible scenario. Let's see your natural prompting instinct.  
+
+**Scenario**
+You want Claude Code to write a Python script that takes a list of numbers and returns the largest number from that list. That's it.
+
+**Your job**
+Write the exact prompt you would type into Claude Code.
+No rules given yet — just write it naturally.
+I will score it and tell you exactly what's missing and why.
