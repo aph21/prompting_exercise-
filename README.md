@@ -16,13 +16,14 @@ Prompting is an engineering skill — not intuition. This repo is my training lo
 Each day lives in its own folder:
 
 ```
-prompt-practice/
-├── day01/
+Prompt_engineering/
+├── Day_1/
+│   ├── Scenario.txt    ← the task description given for the day
 │   ├── prompts.txt     ← all attempts + feedback in one file
-│   ├── final.py        ← the final working script
-│   └── lesson.txt      ← one key takeaway from the day
-├── day02/
+│   └── code.py         ← the final working script
+├── Day_2/
 │   └── ...
+├── learnings.md        ← detailed learning log (all days)
 └── README.md
 ```
 
@@ -64,7 +65,7 @@ Score: X/10
 
 | Day | Concept | Attempt 1 | Attempt 2 | Attempt 3 | Lesson |
 |-----|---------|-----------|-----------|-----------|--------|
-| 01  | Task Clarity | 6.5 | 7.5 | 9.2 | Every constraint must earn its place |
+| 01 ✅ | Task Clarity + Constraints | 6.5 | 7.5 | 9.2 | Every constraint must earn its place |
 | 02  | Multi-step Agentic Prompting | - | - | - | - |
 | 03  | - | - | - | - | - |
 
@@ -99,7 +100,7 @@ These rules get added as I learn them. Each one was earned through a mistake.
 ## Concepts Roadmap
 
 ### Phase 1 — Prompting Foundations (Days 1–10)
-- [x] Day 01 — Task clarity + constraints
+- [x] Day 01 — Task clarity + constraints → [Learning Log](learnings.md#day-1--april-9-2026)
 - [ ] Day 02 — Multi-step agentic prompting
 - [ ] Day 03 — Handling ambiguity and decision gaps
 - [ ] Day 04 — File I/O and side effects
