@@ -1,0 +1,121 @@
+==== Attempt 1 ====
+Build a Student grade tracker using Python with user provided student's name along with their 5 subject marks.
+ input rules:
+ - ask the user to enter each student's name along with their marks for 5 subjects and each subject marks should be separated from comma.
+ - student name should be in string if not then show error and ask them to re enter
+ - marks should be in integer if not then show error and ask them to re enter
+ - marks should be between 0 to 100 if not then show error and ask them to re enter
+ Logic:
+ - calculate the average of 5 subjects using math formula
+ - Assign the grade based on average - A, B, C, D, or F
+ - if average is less than 35 then fail
+ - if average is between 35 to 50 then D
+ - if average is between 50 to 65 then C
+ - if average is between 65 to 80 then B
+ - if average is between 80 to 100 then A
+ 
+ Output:
+- should print if student failed or passed along with their average and grade
+- should save the result to a .txt file named after the student
+ process:
+ - plan first, implement only when confident, then run and verify with sample inputs.
+
+==== Attempt 2 ====
+Build a Student grade tracker using Python with user provided student's name along with their 5 subject marks.
+
+ input rules:
+ - ask the user to enter each student's name along with their marks for 5 subjects and each subject marks should be separated from comma.
+ - student name should be in string if not then show error and ask them to re enter
+ - marks should be in integer if not then show error and ask them to re enter
+ - marks should be between 0 to 100 if not then show error and ask them to re enter
+
+ Logic:
+ - calculate the average of 5 subjects.
+ - Assign the grade based on average - A, B, C, D, or F
+ - if average is less than 35 then fail
+ - if average is between 35 to 50 then D
+ - if average is between 51 to 65 then C
+ - if average is between 66 to 80 then B
+ - if average is between 81 to 100 then A
+ 
+ Output:
+- should print if student failed or passed along with their average and grade
+- should save the result to a .txt file named after the student
+- .txt file should contain Student Name, 5 subject Marks , Average and Grade.
+
+ process:
+ - plan first, implement only when confident, then run and verify with sample inputs.
+
+ sample inputs:
+ - student name: John, marks: 80, 90, 70, 60, 50
+ - should return average 70 and grade B
+ - should save the result to a .txt file named John.txt
+
+ === Attempt 3 ===
+ Build a Student grade tracker using Python with user provided student's name along with their 5 subject marks.
+
+ input rules:
+ - ask the user to enter each student's name along with their marks for 5 subjects and each subject marks should be separated from comma.
+ - student name should be in string if not then show error and ask them to re enter
+ - marks should be in integer if not then show error and ask them to re enter
+ - marks should be between 0 to 100 if not then show error and ask them to re enter
+
+ Logic:
+ - calculate the average of 5 subjects.
+ - then use round() function to round the average to get the nearest integer.
+ - Assign the grade based on average - A, B, C, D, or F
+ - if average is less than 35 then fail
+ - if average is between 35 to 50 then D
+ - if average is between 51 to 65 then C
+ - if average is between 66 to 80 then B
+ - if average is between 81 to 100 then A
+ 
+ Output:
+- should print if student failed or passed along with their average and grade
+- should save the result to a .txt file named after the student
+- .txt file should contain Student Name, 5 subject Marks , Average and Grade.
+
+ process:
+ - plan first, implement only when confident, then run and verify with sample inputs.
+
+ sample inputs:
+ - student name: John, marks: 80, 90, 70, 60, 50
+ - should return average 70 and grade B
+ - should save the result to a .txt file named John.txt
+
+
+ == MODEL PROMPT ===
+ Build a student grade tracker in Python.
+
+Task:
+Take a student's name and marks in 5 subjects, calculate their average, assign a grade, determine pass/fail, and save the result to a .txt file.
+
+Input rules:
+- Ask: "Enter student name:" — must be non-empty alphabetic string. If not, show error and re-prompt.
+- Ask: "Enter marks for 5 subjects separated by commas (e.g. 80,90,70,60,50):"
+- Each mark must be an integer between 0 and 100 inclusive. If not, show error and re-prompt the entire marks line.
+
+Logic:
+- Calculate average: sum of 5 marks / 5
+- Round average to nearest integer using round()
+- Assign grade using these exact rules (no gaps, no overlaps):
+  >= 81 → A (Pass)
+  >= 66 and <= 80 → B (Pass)
+  >= 51 and <= 65 → C (Pass)
+  >= 35 and <= 50 → D (Pass)
+  < 35 → F (Fail)
+- Pass if grade is A, B, C, or D. Fail if grade is F.
+
+Output:
+- Print: "Student: John | Average: 70 | Grade: B | Result: Pass"
+- Save to a .txt file named after the student (e.g. John.txt) with this exact format:
+  Student Name: John
+  Marks: 80, 90, 70, 60, 50
+  Average: 70
+  Grade: B
+  Result: Pass
+
+Process:
+- Plan first, implement only when confident
+- Verify with: John, marks 80,90,70,60,50 → average 70, grade B, result Pass, saved as John.txt
+- Also test edge case: marks 30,30,30,30,30 → average 30, grade F, result Fail

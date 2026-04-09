@@ -1,0 +1,14 @@
+You are building a student grade tracker. You want Claude Code to build a Python script that:
+
+1. Takes a student's name and their marks in 5 subjects from the user
+2. Calculates the average
+3. Assigns a grade based on the average — A, B, C, D, or F
+4. Tells the student whether they passed or failed
+5. Saves the result to a .txt file named after the student
+
+You also want Claude Code to decide the grading scale on its own — you haven't defined it.
+
+
+
+ 
+ 

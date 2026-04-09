@@ -1,0 +1,5 @@
+Student Name: John
+Marks: 80, 90, 70, 60, 50
+Average: 70
+Grade: B
+Result: Pass
