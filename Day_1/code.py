@@ -1,45 +1,43 @@
-#PROMPT 1:
-# Task: write a python script, which should be able to take a list of numbers from user and then should return the largest number from that list
-# before writing script, plan the implementation, only when you are fully confident about your plan and script then implement the script and verify the result
+# ─────────────────────────────────────────────
+# Find the Largest Number (without using max())
+# ─────────────────────────────────────────────
 
-# ─── PLAN ────────────────────────────────────────────────────────────────────
-# 1. Prompt the user to enter numbers separated by spaces.
-# 2. Split the input string into individual tokens.
-# 3. Convert each token to a float (supports integers & decimals).
-# 4. Validate: ensure the list is non-empty and all values are numeric.
-# 5. Use Python's built-in max() to find the largest number.
-# 6. Display the result.
-# ─────────────────────────────────────────────────────────────────────────────
+def get_largest(numbers: list[int]) -> int:
+    """Return the largest integer in a list using manual comparison."""
+    largest = numbers[0]
+    for num in numbers[1:]:
+        if num > largest:
+            largest = num
+    return largest
 
 
-def get_largest_number():
-    """Takes a list of numbers from the user and returns the largest one."""
-
-    user_input = input("Enter numbers separated by spaces: ").strip()
-
-    # Guard: empty input
-    if not user_input:
-        print("Error: No numbers were entered. Please provide at least one number.")
+def main():
+    # 1. Get input from user
+    try:
+        raw = input("Enter integers separated by commas (e.g. 3, 7, 1, 9): ").strip()
+    except EOFError:
+        print("Error: No input provided. Please enter at least one integer.")
         return
 
-    tokens = user_input.split()
+    # 2. Validate: empty input
+    if not raw:
+        print("Error: No input provided. Please enter at least one integer.")
+        return
 
-    # Convert tokens to floats, catching any non-numeric values
+    # 3. Parse and convert each value to int
+    parts = raw.split(",")
     numbers = []
-    for token in tokens:
+    for part in parts:
         try:
-            numbers.append(float(token))
+            numbers.append(int(part.strip()))
         except ValueError:
-            print(f"Error: '{token}' is not a valid number. Please enter numeric values only.")
+            print(f"Error: '{part.strip()}' is not a valid integer. Please enter integers only.")
             return
 
-    largest = max(numbers)
-
-    # Display as int if the value is a whole number, else as float
-    display = int(largest) if largest == int(largest) else largest
-    print(f"\nNumbers entered : {[int(n) if n == int(n) else n for n in numbers]}")
-    print(f"Largest number  : {display}")
+    # 4. Find and display the largest number
+    result = get_largest(numbers)
+    print(f"The largest number is: {result}")
 
 
 if __name__ == "__main__":
-    get_largest_number()
+    main()
