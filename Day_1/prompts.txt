@@ -1,0 +1,25 @@
+==== Attempt 1 ====
+Task: write a python script, which should be able to take a list of numbers from user and then should return the largest number from that list
+* before writing script, plan the implementation, only when you are fully confident about your plan and script then implement the script and verify the result
+
+-------- Feedback ---------
+
+What you got right:
+- [good]  Task is stated clearly — Claude knows what to build.
+- [good]  "Plan before writing" instruction — this is agentic thinking. Most beginners skip this entirely.
+- [good]  "Verify the result" — you instinctively told Claude to check its own work. That's above average.
+- [bonus] "Only when fully confident" — you added a quality gate. Solid instinct.
+
+What's missing:
+- [missing] No edge case handling. What if the list is empty? What if someone types letters instead of numbers? Claude will guess — and might guess wrong.
+- [missing] No output format specified. Should it print the result? Return it from a function? Save to a file? Claude will decide for you.
+- [missing] "Take from user" is vague. Does the user type numbers one by one? Comma-separated? Space-separated? Claude will assume.
+- [missing] No constraint on built-ins. Should Claude use max() or write the logic manually? For learning purposes this matters a lot.
+
+- Day 1 lesson: A good Claude Code prompt answers 5 questions — What to build, How input arrives, What output looks like, What can go wrong, and What constraints apply. Your prompt answered 1.5 of 5. Your agentic instruction (plan → implement → verify) was genuinely strong — that thinking pattern will serve you well as complexity grows.
+
+==== Attempt 2 ====
+* Your task is to build one python script, which should take a list of numbers from user and then return the largest among the list
+* Input ( a list of numbers ) should be taken from user. and numbers should in int datatype
+* output should a single number.
+- Sometimes number may repeat that should not happen list of numbers or input taken from user should be unique, each element should be unique
