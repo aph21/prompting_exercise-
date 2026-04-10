@@ -66,7 +66,7 @@ Score: X/10
 | Day | Concept | Attempt 1 | Attempt 2 | Attempt 3 | Lesson |
 |-----|---------|-----------|-----------|-----------|--------|
 | 01 ✅ | Task Clarity + Constraints | 6.5 | 7.5 | 9.2 | Every constraint must earn its place |
-| 02  | Multi-step Agentic Prompting | - | - | - | - |
+| 02 ✅ | Multi-step Agentic Prompting | - | - | - | Explicitly define data gaps and exact output formats |
 | 03  | - | - | - | - | - |
 
 ---
@@ -100,8 +100,8 @@ These rules get added as I learn them. Each one was earned through a mistake.
 ## Concepts Roadmap
 
 ### Phase 1 — Prompting Foundations (Days 1–10)
-- [x] Day 01 — Task clarity + constraints → [Learning Log](learnings.md#day-1--april-9-2026)
-- [ ] Day 02 — Multi-step agentic prompting
+- [x] Day 01 — Task clarity + constraints → [Learning Log](Day_1/learnings.md)
+- [x] Day 02 — Multi-step agentic prompting → [Learning Log](Day_2/learnings.md)
 - [ ] Day 03 — Handling ambiguity and decision gaps
 - [ ] Day 04 — File I/O and side effects
 - [ ] Day 05 — Error handling instructions
