@@ -13,9 +13,22 @@ def divide(a, b):
 
 if __name__ == "__main__":
     print("Simple Calculator")
-    print(f"5 + 3 = {add(5, 3)}")
-    print(f"10 - 2 = {subtract(10, 2)}")
-    print(f"4 * 6 = {multiply(4, 6)}")
     
-    # The following line will crash the program instead of handling the error gracefully:
-    print(f"8 / 0 = {divide(8, 0)}")
+    try:
+        num1 = float(input("Enter first number: "))
+        op = input("Enter operator (+, -, *, /): ")
+        num2 = float(input("Enter second number: "))
+        
+        if op == '+':
+            print(f"Result: {add(num1, num2)}")
+        elif op == '-':
+            print(f"Result: {subtract(num1, num2)}")
+        elif op == '*':
+            print(f"Result: {multiply(num1, num2)}")
+        elif op == '/':
+            # Calling divide, still intentionally missing zero-division handling inside divide()
+            print(f"Result: {divide(num1, num2)}")
+        else:
+            print("Invalid operator.")
+    except ValueError:
+        print("Please enter valid numbers.")
